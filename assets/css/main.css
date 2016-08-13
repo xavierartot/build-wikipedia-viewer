@@ -1,0 +1,206 @@
+/* line 1, ../sass/main.scss */
+html, body { height: 100%; }
+
+/* line 5, ../sass/main.scss */
+body { overflow-x: hidden; overflow-y: scroll; }
+
+/* line 10, ../sass/main.scss */
+.morphsearch { width: 200px; min-height: 40px; background: #f1f1f1; position: absolute; z-index: 10000; top: 50px; right: 50px; -webkit-transform-origin: 100% 0; transform-origin: 100% 0; -webkit-transition-property: min-height, width, top, right; transition-property: min-height, width, top, right; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+/* line 28, ../sass/main.scss */
+.morphsearch.open { width: 100%; min-height: 100%; top: 0px; right: 0px; }
+
+/* line 35, ../sass/main.scss */
+.morphsearch-form { width: 100%; height: 40px; margin: 0 auto; position: relative; -webkit-transition-property: width, height, -webkit-transform; transition-property: width, height, transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+/* line 48, ../sass/main.scss */
+.morphsearch.open .morphsearch-form { width: 80%; height: 160px; -webkit-transform: translate3d(0, 3em, 0); transform: translate3d(0, 3em, 0); }
+
+/* line 55, ../sass/main.scss */
+.morphsearch-input { width: 100%; height: 100%; padding: 0 10% 0 10px; font-weight: 700; border: none; background: transparent; font-size: 0.8em; color: #ec5a62; -webkit-transition: font-size 0.5s cubic-bezier(0.7, 0, 0.3, 1); transition: font-size 0.5s cubic-bezier(0.7, 0, 0.3, 1); }
+
+/* line 68, ../sass/main.scss */
+.morphsearch-input::-ms-clear { /* remove cross in IE */ display: none; }
+
+/* line 72, ../sass/main.scss */
+.morphsearch.hideInput .morphsearch-input { color: transparent; -webkit-transition: color 0.3s; transition: color 0.3s; }
+
+/* line 78, ../sass/main.scss */
+.morphsearch.open .morphsearch-input { font-size: 7em; }
+
+/* placeholder */
+/* line 83, ../sass/main.scss */
+.morphsearch-input::-webkit-input-placeholder { color: #c2c2c2; }
+
+/* line 87, ../sass/main.scss */
+.morphsearch-input:-moz-placeholder { color: #c2c2c2; }
+
+/* line 91, ../sass/main.scss */
+.morphsearch-input::-moz-placeholder { color: #c2c2c2; }
+
+/* line 95, ../sass/main.scss */
+.morphsearch-input:-ms-input-placeholder { color: #c2c2c2; }
+
+/* hide placeholder when active in Chrome */
+/* line 100, ../sass/main.scss */
+.gn-search:focus::-webkit-input-placeholder { color: transparent; }
+
+/* line 104, ../sass/main.scss */
+input[type="search"] { /* reset normalize */ -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 109, ../sass/main.scss */
+.morphsearch-input:focus, .morphsearch-submit:focus { outline: none; }
+
+/* line 114, ../sass/main.scss */
+.morphsearch-submit { position: absolute; width: 80px; height: 80px; text-indent: 100px; overflow: hidden; right: 0; top: 50%; background-size: 100%; border: none; pointer-events: none; transform-origin: 50% 50%; opacity: 0; -webkit-transform: translate3d(-30px, -50%, 0) scale3d(0, 0, 1); transform: translate3d(-30px, -50%, 0) scale3d(0, 0, 1); }
+
+/* line 132, ../sass/main.scss */
+.morphsearch.open .morphsearch-submit { pointer-events: auto; opacity: 1; -webkit-transform: translate3d(-30px, -50%, 0) scale3d(1, 1, 1); transform: translate3d(-30px, -50%, 0) scale3d(1, 1, 1); -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; transition: opacity 0.3s, transform 0.3s; -webkit-transition-delay: 0.5s; transition-delay: 0.5s; }
+
+/* line 143, ../sass/main.scss */
+.morphsearch-close { width: 36px; height: 36px; position: absolute; right: 1em; top: 1em; overflow: hidden; text-indent: 100%; cursor: pointer; pointer-events: none; opacity: 0; -webkit-transform: scale3d(0, 0, 1); transform: scale3d(0, 0, 1); }
+
+/* line 158, ../sass/main.scss */
+.morphsearch.open .morphsearch-close { opacity: 1; pointer-events: auto; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; transition: opacity 0.3s, transform 0.3s; -webkit-transition-delay: 0.5s; transition-delay: 0.5s; }
+
+/* line 169, ../sass/main.scss */
+.morphsearch-close::before, .morphsearch-close::after { content: ''; position: absolute; width: 2px; height: 100%; top: 0; left: 50%; border-radius: 3px; opacity: 0.2; background: #000; }
+
+/* line 182, ../sass/main.scss */
+.morphsearch-close:hover.morphsearch-close::before, .morphsearch-close:hover.morphsearch-close::after { opacity: 1; }
+
+/* line 187, ../sass/main.scss */
+.morphsearch-close::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+/* line 192, ../sass/main.scss */
+.morphsearch-close::after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+/* line 197, ../sass/main.scss */
+.morphsearch-content { color: #333; margin-top: 4.5em; width: 100%; height: 0; overflow: hidden; padding: 0 10.5%; background: #f1f1f1; position: absolute; pointer-events: none; opacity: 0; }
+
+/* line 210, ../sass/main.scss */
+.morphsearch.open .morphsearch-content { opacity: 1; height: auto; overflow: visible; /* this breaks the transition of the children in FF: https://bugzilla.mozilla.org/show_bug.cgi?id=625289 */ pointer-events: auto; -webkit-transition: opacity 0.3s 0.5s; transition: opacity 0.3s 0.5s; }
+
+/* line 219, ../sass/main.scss */
+.dummy-column { width: 30%; padding: 0 0 6em; float: left; opacity: 0; -webkit-transform: translate3d(0, 100px, 0); transform: translateY(100px); -webkit-transition: -webkit-transform 0.5s, opacity 0.5s; transition: transform 0.5s, opacity 0.5s; }
+
+/* line 230, ../sass/main.scss */
+.morphsearch.open .dummy-column:first-child { -webkit-transition-delay: 0.4s; transition-delay: 0.4s; }
+
+/* line 235, ../sass/main.scss */
+.morphsearch.open .dummy-column:nth-child(2) { -webkit-transition-delay: 0.45s; transition-delay: 0.45s; }
+
+/* line 240, ../sass/main.scss */
+.morphsearch.open .dummy-column:nth-child(3) { -webkit-transition-delay: 0.5s; transition-delay: 0.5s; }
+
+/* line 245, ../sass/main.scss */
+.morphsearch.open .dummy-column { opacity: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+/* line 251, ../sass/main.scss */
+.dummy-column:nth-child(2) { margin: 0 5%; }
+
+/* line 255, ../sass/main.scss */
+.dummy-column h2 { font-size: 1em; letter-spacing: 1px; text-transform: uppercase; font-weight: 800; color: #c2c2c2; padding: 0.5em 0; }
+
+/* line 264, ../sass/main.scss */
+.round { border-radius: 50%; }
+
+/* line 268, ../sass/main.scss */
+.dummy-media-object { padding: 0.75em; display: block; margin: 0.3em 0; cursor: pointer; border-radius: 5px; background: rgba(118, 117, 128, 0.05); }
+
+/* line 277, ../sass/main.scss */
+.dummy-media-object:hover, .dummy-media-object:focus { background: rgba(118, 117, 128, 0.1); }
+
+/* line 282, ../sass/main.scss */
+.dummy-media-object img { display: inline-block; width: 50px; margin: 0 10px 0 0; vertical-align: middle; }
+
+/* line 289, ../sass/main.scss */
+.dummy-media-object h3 { vertical-align: middle; font-size: 0.85em; display: inline-block; font-weight: 700; margin: 0 0 0 0; width: calc(100% - 70px); color: rgba(145, 145, 145, 0.7); }
+
+/* line 299, ../sass/main.scss */
+.dummy-media-object:hover h3 { color: #ec5a62; }
+
+/* Overlay */
+/* line 304, ../sass/main.scss */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); opacity: 0; pointer-events: none; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+/* line 319, ../sass/main.scss */
+.morphsearch.open ~ .overlay { opacity: 1; }
+
+@media screen and (max-width: 53.125em) { /* line 324, ../sass/main.scss */
+  .morphsearch-input { padding: 0 25% 0 10px; }
+  /* line 327, ../sass/main.scss */
+  .morphsearch.open .morphsearch-input { font-size: 2em; }
+  /* line 330, ../sass/main.scss */
+  .dummy-column { float: none; width: auto; padding: 0 0 2em; }
+  /* line 335, ../sass/main.scss */
+  .dummy-column:nth-child(2) { margin: 0; }
+  /* line 338, ../sass/main.scss */
+  .morphsearch.open .morphsearch-submit { -webkit-transform: translate3d(0, -50%, 0) scale3d(0.5, 0.5, 1); transform: translate3d(0, -50%, 0) scale3d(0.5, 0.5, 1); } }
+@media screen and (max-width: 60.625em) { /* line 345, ../sass/main.scss */
+  .morphsearch { width: 80%; top: 10%; right: 10%; } }
+/* line 354, ../sass/main.scss */
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 355, ../sass/main.scss */
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+
+/* line 356, ../sass/main.scss */
+.clearfix:after { clear: both; }
+
+/* line 358, ../sass/main.scss */
+body { background: #c1c1c1; color: #fff; font-size: 1em; font-family: 'Raleway', Arial, sans-serif; min-height: 500px; }
+
+/* line 366, ../sass/main.scss */
+a { color: #fff; text-decoration: none; outline: none; }
+
+/* line 372, ../sass/main.scss */
+a:hover, a:focus { color: #ec5a62; }
+
+/* Header */
+/* line 378, ../sass/main.scss */
+.codrops-header, .sidebar { max-width: 50%; float: left; padding: 40px; }
+
+/* line 385, ../sass/main.scss */
+.sidebar { padding: 50px 50px 0 0; float: right; min-height: 9em; }
+
+/* line 391, ../sass/main.scss */
+.sidebar > nav { float: left; font-size: 1.5em; line-height: 1.75; text-align: center; margin: 0 250px 1em 0; }
+
+/* line 399, ../sass/main.scss */
+.sidebar > nav a { margin: 0 5px; }
+
+/* line 403, ../sass/main.scss */
+.codrops-header h1 { margin: 0; font-weight: 100; font-size: 4.5em; line-height: 0.75; color: #fff; letter-spacing: -1px; }
+
+/* line 412, ../sass/main.scss */
+.codrops-header h1 span { display: block; font-size: 31.5%; font-weight: 800; letter-spacing: 0px; text-indent: 5px; line-height: 1; padding: 1em 0; color: #000; }
+
+/* To Navigation Style */
+/* line 424, ../sass/main.scss */
+.codrops-links { text-transform: uppercase; font-weight: 800; font-size: 1.5em; line-height: 2.2; }
+
+/* line 431, ../sass/main.scss */
+.codrops-links a { display: inline-block; padding: 0 0.5em 0 0; margin: 0 1em 0 0; text-decoration: none; letter-spacing: 1px; position: relative; }
+
+/* line 440, ../sass/main.scss */
+.codrops-links a:first-child:after { content: '/'; color: rgba(255, 255, 255, 0.2); font-weight: 100; position: absolute; font-size: 2em; top: 50%; left: 100%; pointer-events: none; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+
+/* line 453, ../sass/main.scss */
+.codrops-icon span { display: none; }
+
+/* line 457, ../sass/main.scss */
+.codrops-icon:before { margin: 0 4px; text-transform: none; font-weight: normal; font-style: normal; font-variant: normal; font-family: 'codropsicons'; line-height: 1; speak: none; -webkit-font-smoothing: antialiased; }
+
+/* line 469, ../sass/main.scss */
+.codrops-icon-drop:before { content: "\e001"; }
+
+/* line 473, ../sass/main.scss */
+.codrops-icon-prev:before { content: "\e004"; }
+
+@media screen and (max-width: 60.625em) { /* line 478, ../sass/main.scss */
+  .codrops-header, .sidebar { float: none; max-width: 100%; padding: 20px; text-align: center; }
+  /* line 485, ../sass/main.scss */
+  .sidebar > nav { float: none; margin: 100px 0.5em 0; } }
+
+/*# sourceMappingURL=main.css.map */
